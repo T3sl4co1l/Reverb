@@ -1,0 +1,135 @@
+# depslib dependency file v1.0
+1588896056 source:e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\bufserial.c
+	"bufserial.h"
+
+1586710969 e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\bufserial.h
+	<inttypes.h>
+	<stdbool.h>
+	<stdlib.h>
+	<string.h>
+	<avr/io.h>
+	"xmega64d3_corrections.h"
+	<avr/pgmspace.h>
+	<avr/interrupt.h>
+	<util/atomic.h>
+
+1588902489 e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\xmega64d3_corrections.h
+
+1589522388 source:e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\main.c
+	"main.h"
+	<avr/iox64d3.h>
+
+1588307391 e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\main.h
+	<inttypes.h>
+	<stdbool.h>
+	<stdlib.h>
+	<avr/io.h>
+	<avr/interrupt.h>
+	<avr/eeprom.h>
+	<avr/cpufunc.h>
+	<util/atomic.h>
+	<util/delay.h>
+	"pindefs.h"
+	"bufserial.h"
+	"ccpwrite.h"
+	"console.h"
+	"lcd.h"
+	"dsp.h"
+	"menu.h"
+
+1578978655 e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\ccpwrite.h
+	<stdint.h>
+
+1588972544 e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\console.h
+	<inttypes.h>
+	<stdbool.h>
+	<avr/io.h>
+	"xmega64d3_corrections.h"
+	<avr/pgmspace.h>
+	"ansi.h"
+	"bufserial.h"
+	"commands.h"
+
+1528617680 e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\ansi.h
+
+1588963563 e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\commands.h
+	<inttypes.h>
+	<stdbool.h>
+	<stdlib.h>
+	<string.h>
+	<avr/io.h>
+	"xmega64d3_corrections.h"
+	<avr/pgmspace.h>
+	"ansi.h"
+	"bufserial.h"
+
+1589307118 source:e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\commands.c
+	"console.h"
+	"lcd.h"
+	"dsp.h"
+
+1588970821 source:e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\console.c
+	"console.h"
+	"commands.h"
+
+1578971987 source:e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\ccpwrite.c
+	"ccpwrite.h"
+	<inttypes.h>
+	<avr/interrupt.h>
+
+1589169383 e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\pindefs.h
+
+1527154707 source:e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\readcal.c
+	<avr/pgmspace.h>
+	<inttypes.h>
+	"readcal.h"
+
+1527155196 e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\readcal.h
+	<stddef.h>
+
+1588903793 e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\lcd.h
+	<avr/io.h>
+	<avr/interrupt.h>
+	<inttypes.h>
+	<stdbool.h>
+	<stdlib.h>
+	"pindefs.h"
+	"dsp.h"
+
+1589225521 source:e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\lcd.c
+	"lcd.h"
+
+1589522560 e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\dsp.h
+	<avr/io.h>
+	"xmega64d3_corrections.h"
+	"pindefs.h"
+	<avr/interrupt.h>
+	<avr/cpufunc.h>
+	<avr/builtins.h>
+	<inttypes.h>
+	<stdbool.h>
+	<util/atomic.h>
+	"readcal.h"
+
+1589513526 source:e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\dsp.c
+	"dsp.h"
+
+1587089335 e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\pindefs_old.h
+
+1587322176 source:e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\dsp.s
+
+1589253424 source:e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\menu.c
+	"menu.h"
+
+1588880720 e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\menu.h
+	<inttypes.h>
+	<stdbool.h>
+	<stdlib.h>
+	<stddef.h>
+	<string.h>
+	"lcd.h"
+	<avr/eeprom.h>
+
+1589521908 source:e:\documents and settings\tim williams\my documents\avrstudio 5.1\reverb\asmdsp.s
+	"dsp.h"
+

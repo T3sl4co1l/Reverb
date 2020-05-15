@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Reverb" />
+		<Option pch_mode="2" />
+		<Option compiler="avr-gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="Debug/Reverb.elf" prefix_auto="1" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="Debug/" />
+				<Option type="5" />
+				<Option compiler="avr-gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="Release/Reverb.elf" prefix_auto="1" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="Release/" />
+				<Option type="5" />
+				<Option compiler="avr-gcc" />
+				<Compiler>
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-flto" />
+					<Add option="-Os" />
+				</Compiler>
+				<Linker>
+					<Add option="-flto" />
+				</Linker>
+			</Target>
+			<Environment>
+				<Variable name="CPU_CORE" value="x64d3" />
+				<Variable name="MCU" value="atxmega64d3" />
+			</Environment>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-mmcu=atxmega64d3" />
+		</Compiler>
+		<Linker>
+			<Add option="-mmcu=atxmega64d3" />
+			<Add option="-Wl,-Map=$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).map,--cref" />
+		</Linker>
+		<ExtraCommands>
+			<Add after='cmd /c avr-objdump -h -S &quot;$(TARGET_OUTPUT_FILE)&quot; &gt; &quot;$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).lss&quot;' />
+			<Add after='cmd /c avr-nm &quot;$(TARGET_OUTPUT_FILE)&quot; &gt; &quot;$(TARGET_OUTPUT_DIR)\$(TARGET_OUTPUT_BASENAME).lst&quot;' />
+			<Add after="avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).hex" />
+			<Add after="E:\Program Files\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-size --mcu=atxmega64d3 --format=avr $(TARGET_OUTPUT_FILE)" />
+		</ExtraCommands>
+		<Unit filename="asmdsp.S">
+			<Option compiler="avr-gcc" use="1" buildCommand="$compiler $options -x assembler-with-cpp $includes -c $file -o $object" />
+		</Unit>
+		<Unit filename="bufserial.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="bufserial.h" />
+		<Unit filename="ccpwrite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ccpwrite.h" />
+		<Unit filename="commands.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="commands.h" />
+		<Unit filename="console.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="console.h" />
+		<Unit filename="dsp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="dsp.h" />
+		<Unit filename="lcd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lcd.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.h" />
+		<Unit filename="menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menu.h" />
+		<Unit filename="pindefs.h" />
+		<Unit filename="readcal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="readcal.h" />
+		<Unit filename="xmega64d3_corrections.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

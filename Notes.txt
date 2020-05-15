@@ -1,0 +1,310 @@
+Reverb Machine
+================
+
+Starting Point
+----------------
+MCU: ATXMEGA64D3
+RAM: CY62148EV30LL-55SXI
+ADC: MCU internal, 12 bit, mono, oversampled, filtered and decimated
+DAC: PWM, 120MHz clock, 12 bits, 29kHz sample rate; or MCP4922-E/SL, DAC0832LCN, DAC1232LCJ, DAC1209LCD
+MCU supply: 3.3V, LDO, filtered
+DAC and analog supply: 5-6V (direct or LDO)
+Analog amps: TLV2372
+Physical Interface: Theremin riser module (power, mono audio); wall wart (barrel jack), RCA or phono jacks (standalone)?
+Available supplies, Theremin: 6V, 130V
+Available supplies, other: 5-15V wall wart?
+
+User Interface
+----------------
+Serial + MAX232 to start out with
+Pushbuttons + LCD?
+
+MCU Pinout
+------------
+
+Pin		Name	Other	RAM		DAC		LCD
+---------------------------------------------
+1		PA3		NC
+2		PA4		NC
+3		PA5		NC
+4		PA6		NC
+5		PA7		NC
+6		PB0				D0		D0		D0
+7		PB1				D1		D1		D1
+8		PB2				D2		D2		D2
+9		PB3				D3		D3		D3
+10		PB4				D4		D4		D4
+11		PB5				D5		D5		D5
+12		PB6				D6		D6		D6
+13		PB7				D7		D7		D7
+14		GND		GND
+15		VDD		+3.3V
+16		PC0				A0		D8		RS
+17		PC1				A1		D9
+18		PC2				A2		D10
+19		PC3				A3		D11
+20		PC4				A4
+21		PC5				A5
+22		PC6				A6
+23		PC7				A7
+24		GND		GND
+25		VDD		+3.3V
+26		PD0				A8
+27		PD1				A9
+28		PD2				A10
+29		PD3				A11
+30		PD4				A12
+31		PD5				A13
+32		PD6				A14
+33		PD7				A15
+34		GND		GND
+35		VDD		+3.3V
+36		PE0		NC
+37		PE1		NC
+38		PE2		RXD
+39		PE3		TXD
+40		PE4								WRLCD
+41		PE5						nWRDAC
+42		PE6				nRDRAM
+43		PE7				nWRRAM
+44		GND		GND
+45		VDD		+3.3V
+46		PF0				A16
+47		PF1				A17
+48		PF2				A18
+49		PF3		PB1
+50		PF4		PB2
+51		PF5		PB3
+52		GND		GND
+53		VDD		+3.3V
+54		PF6		PB4
+55		PF7		NC
+56		PDI_DAT	PDI_DAT
+57		PDI_CLK	PDI_CLK
+58		XTAL2	XTAL2
+59		XTAL1	XTAL1
+60		GND		GND
+61		AVDD	AVDD
+62		PA0		VREF
+63		PA1		AIN0
+64		PA2		
+
+RAM Pinout
+------------
+Pin		Name	Net
+1		A17		A17
+2		A16		A16
+3		A14		A14
+4		A12		A12
+5		A7		A7
+6		A6		A6
+7		A5		A5
+8		A4		A4
+9		A3		A3
+10		A2		A2
+11		A1		A1
+12		A0		A0
+13		D0		D0
+14		D1		D1
+15		D2		D2
+16		GND		GND
+17		D3		D3
+18		D4		D4
+19		D5		D5
+20		D6		D6
+21		D7		D7
+22		nCE		GND
+23		A10		A10
+24		nOE		nRDRAM
+25		A11		A11
+26		A9		A9
+27		A8		A8
+28		A13		A13
+29		nWE		nWRRAM
+30		A18		A18
+31		A15		A15
+32		VDD		+3.3V
+
+DAC Pinout
+------------
+Pin		Name	Net
+1		nCS		GND
+2		nWR1	nWRDAC
+3		GND		GND
+4		D5		D5
+5		D4		D4
+6		D3		D3
+7		D2		D2
+8		D1		D1
+9		D0		D0
+10		Vref	Vref -5V
+11		Rfb		Vout
+12		GND		GND
+13		Iout1	Vin-
+14		Iout2	GND
+15		D11		D11
+16		D10		D10
+17		D9		D9
+18		D8		D8
+19		D7		D7
+20		D6		D6
+21		nXFER	GND
+22		nWR2	GND
+23		B1/nB2	+6V
+24		VDD		+6V
+
+Wiring List
+------------
+
+* Connection not wired yet
+		Chip Pin
+Name	MCU		RAM		DAC		LCD		Other		Done
+D0		6		13		9		7					X
+D1		7		14		8		8					X
+D2		8		15		7		9					X
+D3		9		17		6		10					X
+D4		10		18		5		11					X
+D5		11		19		4		12					X
+D6		12		20		20		13					X
+D7		13		21		19		14					X
+A0		16		12		18		4					X
+A1		17		11		17							X
+A2		18		10		16							X
+A3		19		9		15							X
+A4		20		8									X
+A5		21		7									X
+A6		22		6									X
+A7		23		5									X
+A8		26		27									X
+A9		27		26									X
+A10		28		23									X
+A11		29		25									X
+A12		30		4									X
+A13		31		28									X
+A14		32		3									X
+A15		33		31									X
+RXD		38								RXD			X
+TXD		39								TXD			X
+WRLCD	40						6					X
+nWRDAC	41				2							X
+nRDRAM	42		24									X
+nWRRAM	43		29									X
+A16		46		2									X
+A17		47		1									X
+A18		48		30									X
+PB1		49								PB1			X
+PB2		50								PB2			X
+PB3		51								PB3			X
+PB4		54								PB4			X
+		14								GND			X
+		24								GND			X
+		34								GND			X
+		44								GND			X
+		52								GND			X
+		60								GND			X
+		15								+3.3V		X
+		25								+3.3V		X
+		35								+3.3V		X
+		45								+3.3V		X
+		53								+3.3V		X
+PDI_DAT	56								PDI_DAT		X
+PDI_CLK	57								PDI_CLK		X
+XTAL2	58								XTAL2		X
+XTAL1	59								XTAL1		X
+AVDD	61								+3.3V		X
+VREF	62								+3.3V		X
+AIN0	63								AIN0		X
+				16						GND			X
+				22						GND			X
+				32						+3.3V		X
+Vref					10				-5V			X
+						13				Vin-		X
+						11				Vout		X
+						1				GND			X
+						3				GND			X
+						12				GND			X
+						14				GND			X
+						21				GND			X
+						22				GND			X
+						23				+6V			X
+						24				+6V			X
+								1		GND			X
+								2		+3.3V		X
+								3		Vcontrast	
+								5		GND			X
+
+- Noninverting configuration, VREF applied to Iout1, voltage comes out Vref pin.
+	* Requires VREF <= 3V and VDD >= 13V
+- Inverting configuration, VREF to Vref, Iout1 and Rfb used with inverting op-amp.
+	* Requires VREF < 0 for positive output
+- In either case, charge pump should suffice?  Probably better to make -10V, filter and shunt regulate to -5.0V, than to make extra VDD and hope it's well enough filtered?
+	* VDD PSRR not specified vs. frequency
+
+
+LCD Header Pinout
+-------------------
+Header	LCD		Name
+1		1		GND
+2		2		+3.3V
+3		3		Vcontrast
+4		4		RS (A0)
+5		5		R/nW
+6		6		WRLCD
+7		7		D0
+8		8		D1
+9		9		D2
+10		10		D3
+11		11		D4
+12		12		D5
+13		13		D6
+14		14		D7
+
+Serial Header Pinout
+----------------------
+Pin		Color	Name
+1		BLK		GND
+2		YEL		RXD
+3		BLU		TXD
+4		RED		+6V
+
+Pushbutton Header Pinout
+--------------------------
+Pin		Color	Name	Direction
+1		WHI		GND		(Common)
+2		GRA		PB1		Left
+3		GRA		PB2		Right
+4		GRA		PB3		Up
+5		GRA		PB4		Down
+
+Full scale: 2.681V = 32760 counts (4095 raw ADC count * 8 samples accumulated)
+Zero scale: 1.42mV = 1524
+Adjust bias to: 1.341V (17142 counts)
+Original bias divider 2 x 22k, 3.277V supply / ref
+Target voltage ratio: 0.4093
+Replace one resistor, or add one in parallel, to reach new level.
+Replace pulldown: pullup constant, replace pulldown with 15.24k
+Parallel: pullup constant, 49.63k in parallel with pulldown
+Replace pullup: pulldown constant, replace pullup with 31.75k
+--> 49.9k closest handy value. Connect in parallel.
+--> 17184 counts
+
+Menu System
+-------------
+- Load Presets
+    * List EEPROM contents
+		+ Allocate array of struct in EEPROM for storing settings
+		+ Denote end of array with empty element?
+- Save Preset
+- Adjust Parameters
+	* Reverb Tap 0
+		+ Delay
+		+ Gain (signed)
+	* Reverb Tap 1
+	* Reverb Tap 2
+	* Reverb Tap ...
+		+ Determine how many taps and filter stages can 
+	* Filter coefficients
+		+ Input and output?  Per tap?
+			- Probably not enough CPU for per-tap
+		+ Lowpass, highpass, mix?  Several cascaded?
+

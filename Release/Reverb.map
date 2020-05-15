@@ -1,0 +1,1076 @@
+Archive member included to satisfy reference by file (symbol)
+
+e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+                              e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o (exit)
+e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strlen_P.o)
+                              Release\bufserial.o (symbol from plugin) (__strlen_P)
+e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strncmp_P.o)
+                              Release\console.o (symbol from plugin) (strncmp_P)
+e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(itoa_ncheck.o)
+                              Release\console.o (symbol from plugin) (__itoa_ncheck)
+e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(utoa_ncheck.o)
+                              Release\bufserial.o (symbol from plugin) (__utoa_ncheck)
+e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strrev.o)
+                              e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(utoa_ncheck.o) (strrev)
+e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eerd_block.o)
+                              Release\menu.o (symbol from plugin) (eeprom_read_block)
+e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eewr_block.o)
+                              Release\menu.o (symbol from plugin) (eeprom_write_block)
+e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eewr_byte.o)
+                              e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eewr_block.o) (eeprom_write_r18)
+e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(memcpy.o)
+                              e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eerd_block.o) (memcpy)
+e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+                              C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o (__do_copy_data)
+e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+                              C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o (__do_clear_bss)
+e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strncpy.o)
+                              C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o (strncpy)
+
+Allocating common symbols
+Common symbol       size              file
+
+adcLiveSample       0x2               Release\dsp.o (symbol from plugin)
+serRxBuffer         0x40              Release\bufserial.o (symbol from plugin)
+menuIndex           0x1               Release\menu.o (symbol from plugin)
+menuPosY            0x1               Release\menu.o (symbol from plugin)
+menuTotal           0x1               Release\menu.o (symbol from plugin)
+adcSlowSample       0x2               Release\commands.o (symbol from plugin)
+menuPosX            0x1               Release\menu.o (symbol from plugin)
+serTxBuffer         0x40              Release\bufserial.o (symbol from plugin)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000100000 xr
+data             0x0000000000802000 0x000000000000ffa0 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000400 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+user_signatures  0x0000000000850000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+LOAD Release\asmdsp.o
+LOAD C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+LOAD e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a
+LOAD e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libm.a
+START GROUP
+LOAD e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a
+LOAD e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libm.a
+LOAD e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a
+LOAD e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a
+END GROUP
+                0x0000000000100000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x100000
+                0x000000000000ffa0                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                0x0000000000010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                0x0000000000000400                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x0000000000000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000     0x258e
+ *(.vectors)
+ .vectors       0x0000000000000000      0x1c8 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+                0x0000000000000000                __vectors
+ *(.vectors)
+ *(.progmem.gcc*)
+                0x00000000000001c8                . = ALIGN (0x2)
+                0x00000000000001c8                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000000000001c8        0x0 linker stubs
+ *(.trampolines*)
+                0x00000000000001c8                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+ *(.progmem.*)
+ .progmem.data  0x00000000000001c8      0x3a9 C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                0x0000000000000572                . = ALIGN (0x2)
+ *fill*         0x0000000000000571        0x1 
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000000000000572                __ctors_start = .
+ *(.ctors)
+                0x0000000000000572                __ctors_end = .
+                0x0000000000000572                __dtors_start = .
+ *(.dtors)
+                0x0000000000000572                __dtors_end = .
+ SORT_BY_NAME(*)(.ctors)
+ SORT_BY_NAME(*)(.dtors)
+ *(.init0)
+ .init0         0x0000000000000572        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+                0x0000000000000572                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000000000000572        0xc e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000000000000057e       0x1a e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+                0x000000000000057e                __do_copy_data
+ .init4         0x0000000000000598       0x10 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+                0x0000000000000598                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000000000005a8        0x8 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+ *(.init9)
+ *(.text)
+ .text          0x00000000000005b0        0x4 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+                0x00000000000005b0                __vector_38
+                0x00000000000005b0                __vector_104
+                0x00000000000005b0                __vector_22
+                0x00000000000005b0                __vector_63
+                0x00000000000005b0                __vector_28
+                0x00000000000005b0                __vector_67
+                0x00000000000005b0                __vector_1
+                0x00000000000005b0                __vector_32
+                0x00000000000005b0                __vector_75
+                0x00000000000005b0                __vector_91
+                0x00000000000005b0                __vector_34
+                0x00000000000005b0                __vector_62
+                0x00000000000005b0                __vector_102
+                0x00000000000005b0                __vector_24
+                0x00000000000005b0                __vector_12
+                0x00000000000005b0                __vector_55
+                0x00000000000005b0                __vector_69
+                0x00000000000005b0                __vector_81
+                0x00000000000005b0                __vector_90
+                0x00000000000005b0                __vector_46
+                0x00000000000005b0                __bad_interrupt
+                0x00000000000005b0                __vector_72
+                0x00000000000005b0                __vector_6
+                0x00000000000005b0                __vector_110
+                0x00000000000005b0                __vector_31
+                0x00000000000005b0                __vector_92
+                0x00000000000005b0                __vector_35
+                0x00000000000005b0                __vector_78
+                0x00000000000005b0                __vector_74
+                0x00000000000005b0                __vector_39
+                0x00000000000005b0                __vector_107
+                0x00000000000005b0                __vector_3
+                0x00000000000005b0                __vector_105
+                0x00000000000005b0                __vector_98
+                0x00000000000005b0                __vector_23
+                0x00000000000005b0                __vector_68
+                0x00000000000005b0                __vector_30
+                0x00000000000005b0                __vector_73
+                0x00000000000005b0                __vector_45
+                0x00000000000005b0                __vector_25
+                0x00000000000005b0                __vector_93
+                0x00000000000005b0                __vector_61
+                0x00000000000005b0                __vector_11
+                0x00000000000005b0                __vector_54
+                0x00000000000005b0                __vector_99
+                0x00000000000005b0                __vector_13
+                0x00000000000005b0                __vector_17
+                0x00000000000005b0                __vector_19
+                0x00000000000005b0                __vector_56
+                0x00000000000005b0                __vector_7
+                0x00000000000005b0                __vector_49
+                0x00000000000005b0                __vector_41
+                0x00000000000005b0                __vector_86
+                0x00000000000005b0                __vector_100
+                0x00000000000005b0                __vector_101
+                0x00000000000005b0                __vector_64
+                0x00000000000005b0                __vector_88
+                0x00000000000005b0                __vector_109
+                0x00000000000005b0                __vector_43
+                0x00000000000005b0                __vector_27
+                0x00000000000005b0                __vector_5
+                0x00000000000005b0                __vector_113
+                0x00000000000005b0                __vector_33
+                0x00000000000005b0                __vector_76
+                0x00000000000005b0                __vector_47
+                0x00000000000005b0                __vector_52
+                0x00000000000005b0                __vector_37
+                0x00000000000005b0                __vector_95
+                0x00000000000005b0                __vector_103
+                0x00000000000005b0                __vector_96
+                0x00000000000005b0                __vector_89
+                0x00000000000005b0                __vector_108
+                0x00000000000005b0                __vector_4
+                0x00000000000005b0                __vector_44
+                0x00000000000005b0                __vector_82
+                0x00000000000005b0                __vector_106
+                0x00000000000005b0                __vector_51
+                0x00000000000005b0                __vector_9
+                0x00000000000005b0                __vector_2
+                0x00000000000005b0                __vector_21
+                0x00000000000005b0                __vector_15
+                0x00000000000005b0                __vector_66
+                0x00000000000005b0                __vector_36
+                0x00000000000005b0                __vector_79
+                0x00000000000005b0                __vector_70
+                0x00000000000005b0                __vector_83
+                0x00000000000005b0                __vector_29
+                0x00000000000005b0                __vector_60
+                0x00000000000005b0                __vector_40
+                0x00000000000005b0                __vector_85
+                0x00000000000005b0                __vector_94
+                0x00000000000005b0                __vector_8
+                0x00000000000005b0                __vector_26
+                0x00000000000005b0                __vector_48
+                0x00000000000005b0                __vector_112
+                0x00000000000005b0                __vector_111
+                0x00000000000005b0                __vector_80
+                0x00000000000005b0                __vector_84
+                0x00000000000005b0                __vector_57
+                0x00000000000005b0                __vector_53
+                0x00000000000005b0                __vector_10
+                0x00000000000005b0                __vector_50
+                0x00000000000005b0                __vector_16
+                0x00000000000005b0                __vector_18
+                0x00000000000005b0                __vector_97
+                0x00000000000005b0                __vector_42
+                0x00000000000005b0                __vector_87
+                0x00000000000005b0                __vector_65
+ .text          0x00000000000005b4      0x1d0 Release\asmdsp.o
+                0x00000000000005b4                __vector_71
+                0x00000000000005da                readRamWord
+                0x000000000000060e                writeRamWord
+                0x0000000000000640                writeDac
+                0x0000000000000672                mac32p16p16
+                0x00000000000006a6                mac32r16p8
+                0x00000000000006c8                dspHighpass
+                0x0000000000000702                dspBiquadFilter
+ .text          0x0000000000000784     0x159c C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                0x0000000000001b62                __vector_default
+                0x0000000000001b6e                __vector_14
+                0x0000000000001b7a                __vector_77
+                0x0000000000001b98                __vector_20
+                0x0000000000001c50                __vector_59
+                0x0000000000001cb4                __vector_58
+ .text          0x0000000000001d20        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+ .text          0x0000000000001d20        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strlen_P.o)
+ .text          0x0000000000001d20        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strncmp_P.o)
+ .text          0x0000000000001d20        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(itoa_ncheck.o)
+ .text          0x0000000000001d20        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(utoa_ncheck.o)
+ .text          0x0000000000001d20        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strrev.o)
+ .text          0x0000000000001d20        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eerd_block.o)
+ .text          0x0000000000001d20        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eewr_block.o)
+ .text          0x0000000000001d20        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eewr_byte.o)
+ .text          0x0000000000001d20        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(memcpy.o)
+ .text          0x0000000000001d20        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text          0x0000000000001d20        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text          0x0000000000001d20        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strncpy.o)
+                0x0000000000001d20                . = ALIGN (0x2)
+ *(.text.*)
+ .text.startup  0x0000000000001d20      0x730 C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                0x0000000000001d20                main
+ .text.libgcc.mul
+                0x0000000000002450        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000000000002450        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000002450        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000000000002450        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000000000002450        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000000000002450        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x0000000000002450        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+ .text.avr-libc
+                0x0000000000002450       0x12 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strlen_P.o)
+                0x0000000000002450                __strlen_P
+ .text.avr-libc
+                0x0000000000002462       0x1c e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strncmp_P.o)
+                0x0000000000002462                strncmp_P
+ .text.avr-libc
+                0x000000000000247e       0x16 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(itoa_ncheck.o)
+                0x000000000000247e                __itoa_ncheck
+ .text.avr-libc
+                0x0000000000002494       0x34 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(utoa_ncheck.o)
+                0x0000000000002494                __utoa_ncheck
+                0x0000000000002496                __utoa_common
+ .text.avr-libc
+                0x00000000000024c8       0x20 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strrev.o)
+                0x00000000000024c8                strrev
+ .text.avr-libc
+                0x00000000000024e8       0x18 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eerd_block.o)
+                0x00000000000024e8                eeprom_read_block
+ .text.avr-libc
+                0x0000000000002500       0x14 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eewr_block.o)
+                0x0000000000002500                eeprom_write_block
+ .text.avr-libc
+                0x0000000000002514       0x46 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eewr_byte.o)
+                0x0000000000002514                eeprom_write_byte
+                0x0000000000002516                eeprom_write_r18
+ .text.avr-libc
+                0x000000000000255a       0x12 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(memcpy.o)
+                0x000000000000255a                memcpy
+ .text.libgcc.mul
+                0x000000000000256c        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x000000000000256c        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc   0x000000000000256c        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x000000000000256c        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x000000000000256c        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x000000000000256c        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x000000000000256c        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x000000000000256c        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x000000000000256c        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x000000000000256c        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x000000000000256c        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x000000000000256c        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x000000000000256c        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x000000000000256c        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x000000000000256c       0x1e e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strncpy.o)
+                0x000000000000256c                strncpy
+                0x000000000000258a                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000000000000258a        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+                0x000000000000258a                _exit
+                0x000000000000258a                exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000000000000258a        0x4 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+ *(.fini0)
+ *(.hightext)
+ *(.hightext*)
+ *(.progmemx.*)
+                0x000000000000258e                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+                0x000000000000258e                _etext = .
+
+.data           0x0000000000802000      0x170 load address 0x000000000000258e
+                0x0000000000802000                PROVIDE (__data_start = .)
+ *(.data)
+ .data          0x0000000000802000        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+ .data          0x0000000000802000        0x0 Release\asmdsp.o
+ .data          0x0000000000802000      0x16f C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                0x000000000080214e                dspParams
+ .data          0x000000000080216f        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+ .data          0x000000000080216f        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strlen_P.o)
+ .data          0x000000000080216f        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strncmp_P.o)
+ .data          0x000000000080216f        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(itoa_ncheck.o)
+ .data          0x000000000080216f        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(utoa_ncheck.o)
+ .data          0x000000000080216f        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strrev.o)
+ .data          0x000000000080216f        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eerd_block.o)
+ .data          0x000000000080216f        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eewr_block.o)
+ .data          0x000000000080216f        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eewr_byte.o)
+ .data          0x000000000080216f        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(memcpy.o)
+ .data          0x000000000080216f        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+ .data          0x000000000080216f        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .data          0x000000000080216f        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strncpy.o)
+ *(.data*)
+ *(.gnu.linkonce.d*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.r*)
+                0x0000000000802170                . = ALIGN (0x2)
+ *fill*         0x000000000080216f        0x1 
+                0x0000000000802170                _edata = .
+                0x0000000000802170                PROVIDE (__data_end = .)
+
+.bss            0x0000000000802170       0xed
+                0x0000000000802170                PROVIDE (__bss_start = .)
+ *(.bss)
+ .bss           0x0000000000802170        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+ .bss           0x0000000000802170        0xe Release\asmdsp.o
+ .bss           0x000000000080217e       0xdf C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+ .bss           0x000000000080225d        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+ .bss           0x000000000080225d        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strlen_P.o)
+ .bss           0x000000000080225d        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strncmp_P.o)
+ .bss           0x000000000080225d        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(itoa_ncheck.o)
+ .bss           0x000000000080225d        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(utoa_ncheck.o)
+ .bss           0x000000000080225d        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strrev.o)
+ .bss           0x000000000080225d        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eerd_block.o)
+ .bss           0x000000000080225d        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eewr_block.o)
+ .bss           0x000000000080225d        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eewr_byte.o)
+ .bss           0x000000000080225d        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(memcpy.o)
+ .bss           0x000000000080225d        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+ .bss           0x000000000080225d        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+ .bss           0x000000000080225d        0x0 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strncpy.o)
+ *(.bss*)
+ *(COMMON)
+                0x000000000080225d                PROVIDE (__bss_end = .)
+                0x000000000000258e                __data_load_start = LOADADDR (.data)
+                0x00000000000026fe                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x000000000080225d        0x0
+                [!provide]                        PROVIDE (__noinit_start = .)
+ *(.noinit*)
+                [!provide]                        PROVIDE (__noinit_end = .)
+                0x000000000080225d                _end = .
+                [!provide]                        PROVIDE (__heap_start = .)
+
+.eeprom         0x0000000000810000      0x200
+ *(.eeprom*)
+ .eeprom        0x0000000000810000      0x200 C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                0x0000000000810200                __eeprom_end = .
+
+.fuse           0x0000000000820000        0x6
+ *(.fuse)
+ .fuse          0x0000000000820000        0x6 C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                0x0000000000820000                __fuse
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x11
+ *(.comment)
+ .comment       0x0000000000000000       0x11 C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                         0x12 (size before relaxing)
+
+.note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0x60
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x20 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+ .debug_aranges
+                0x0000000000000020       0x20 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+ .debug_aranges
+                0x0000000000000040       0x20 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x21da
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000     0x2168 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+ .debug_info    0x0000000000002168       0x26 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+ .debug_info    0x000000000000218e       0x26 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+ .debug_info    0x00000000000021b4       0x26 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+
+.debug_abbrev   0x0000000000000000     0x1fde
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000     0x1fa2 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+ .debug_abbrev  0x0000000000001fa2       0x14 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+ .debug_abbrev  0x0000000000001fb6       0x14 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+ .debug_abbrev  0x0000000000001fca       0x14 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+
+.debug_line     0x0000000000000000      0x1a6
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000       0x1d e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+ .debug_line    0x000000000000001d       0x61 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+ .debug_line    0x000000000000007e       0xa3 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+ .debug_line    0x0000000000000121       0x85 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x0000000000000000     0x16a4
+ *(.debug_str)
+ .debug_str     0x0000000000000000     0x1641 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+ .debug_str     0x0000000000001641       0x63 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+ .debug_str     0x00000000000016a4       0x63 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+ .debug_str     0x00000000000016a4       0x63 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+OUTPUT(Release\Reverb.elf elf32-avr)
+LOAD linker stubs
+
+Cross Reference Table
+
+Symbol                                            File
+CCPWrite                                          Release\ccpwrite.o (symbol from plugin)
+                                                  Release\main.o (symbol from plugin)
+MenuMain                                          Release\menu.o (symbol from plugin)
+                                                  Release\main.o (symbol from plugin)
+MenuPreset                                        Release\menu.o (symbol from plugin)
+PresetIndex                                       Release\menu.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+Presets                                           Release\main.o (symbol from plugin)
+                                                  Release\menu.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+SP_ReadCalibrationByte                            Release\readcal.o (symbol from plugin)
+                                                  Release\dsp.o (symbol from plugin)
+Str_Ansi_Cl                                       Release\console.o (symbol from plugin)
+Str_Ansi_Er                                       Release\console.o (symbol from plugin)
+Str_Ansi_ML                                       Release\console.o (symbol from plugin)
+Str_Ansi_Re                                       Release\console.o (symbol from plugin)
+Str_Ansi_Sv                                       Release\console.o (symbol from plugin)
+Str_Caret                                         Release\console.o (symbol from plugin)
+Str_Cmd_Unk                                       Release\console.o (symbol from plugin)
+Str_Welc                                          Release\console.o (symbol from plugin)
+                                                  Release\main.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+__bad_interrupt                                   e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__bss_end                                         e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+__bss_start                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+__data_end                                        e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+__data_load_start                                 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+__data_start                                      e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+__do_clear_bss                                    e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_clear_bss.o)
+                                                  C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+__do_copy_data                                    e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_copy_data.o)
+                                                  C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+__fuse                                            C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\main.o (symbol from plugin)
+__heap_end                                        e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__init                                            e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__itoa_ncheck                                     e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(itoa_ncheck.o)
+                                                  C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\console.o (symbol from plugin)
+__stack                                           e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__strlen_P                                        e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strlen_P.o)
+                                                  C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\bufserial.o (symbol from plugin)
+__utoa_common                                     e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(utoa_ncheck.o)
+                                                  e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(itoa_ncheck.o)
+__utoa_ncheck                                     e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(utoa_ncheck.o)
+                                                  C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\lcd.o (symbol from plugin)
+                                                  Release\bufserial.o (symbol from plugin)
+__vector_1                                        e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_10                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_100                                      e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_101                                      e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_102                                      e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_103                                      e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_104                                      e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_105                                      e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_106                                      e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_107                                      e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_108                                      e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_109                                      e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_11                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_110                                      e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_111                                      e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_112                                      e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_113                                      e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_12                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_13                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_14                                       C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\main.o (symbol from plugin)
+                                                  e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_15                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_16                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_17                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_18                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_19                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_2                                        e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_20                                       C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\dsp.o (symbol from plugin)
+                                                  e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_21                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_22                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_23                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_24                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_25                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_26                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_27                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_28                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_29                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_3                                        e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_30                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_31                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_32                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_33                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_34                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_35                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_36                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_37                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_38                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_39                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_4                                        e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_40                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_41                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_42                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_43                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_44                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_45                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_46                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_47                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_48                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_49                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_5                                        e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_50                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_51                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_52                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_53                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_54                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_55                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_56                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_57                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_58                                       C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\bufserial.o (symbol from plugin)
+                                                  e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_59                                       C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\bufserial.o (symbol from plugin)
+                                                  e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_6                                        e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_60                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_61                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_62                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_63                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_64                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_65                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_66                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_67                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_68                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_69                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_7                                        e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_70                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_71                                       Release\asmdsp.o
+                                                  e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_72                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_73                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_74                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_75                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_76                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_77                                       C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\lcd.o (symbol from plugin)
+                                                  e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_78                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_79                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_8                                        e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_80                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_81                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_82                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_83                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_84                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_85                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_86                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_87                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_88                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_89                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_9                                        e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_90                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_91                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_92                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_93                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_94                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_95                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_96                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_97                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_98                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_99                                       e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vector_default                                  C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\main.o (symbol from plugin)
+                                                  e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+__vectors                                         e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+_exit                                             e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+adcLiveSample                                     Release\dsp.o (symbol from plugin)
+adcSlowSample                                     Release\menu.o (symbol from plugin)
+                                                  Release\main.o (symbol from plugin)
+                                                  Release\lcd.o (symbol from plugin)
+                                                  Release\dsp.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+ansiMoveVar                                       Release\console.o (symbol from plugin)
+asciiToNibble                                     Release\console.o (symbol from plugin)
+bufDeleteByte                                     Release\console.o (symbol from plugin)
+bufInsertByte                                     Release\console.o (symbol from plugin)
+cmdCpuFunc                                        Release\commands.o (symbol from plugin)
+cmdCpuHelp                                        Release\commands.o (symbol from plugin)
+cmdCpuSpec                                        Release\commands.o (symbol from plugin)
+cmdDumpMem                                        Release\commands.o (symbol from plugin)
+cmdDumpPgmFunc                                    Release\commands.o (symbol from plugin)
+cmdDumpPgmHelp                                    Release\commands.o (symbol from plugin)
+cmdDumpPgmSpec                                    Release\commands.o (symbol from plugin)
+cmdDumpRamFunc                                    Release\commands.o (symbol from plugin)
+cmdDumpRamHelp                                    Release\commands.o (symbol from plugin)
+cmdDumpRamSpec                                    Release\commands.o (symbol from plugin)
+cmdExitCode                                       Release\console.o (symbol from plugin)
+                                                  Release\main.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+cmdFileFunc                                       Release\commands.o (symbol from plugin)
+cmdFileHelp                                       Release\commands.o (symbol from plugin)
+cmdFileSpec                                       Release\commands.o (symbol from plugin)
+cmdFiltEnFunc                                     Release\commands.o (symbol from plugin)
+cmdFiltEnHelp                                     Release\commands.o (symbol from plugin)
+cmdFiltEnSpec                                     Release\commands.o (symbol from plugin)
+cmdFiltFunc                                       Release\commands.o (symbol from plugin)
+cmdFiltHelp                                       Release\commands.o (symbol from plugin)
+cmdFiltSpec                                       Release\commands.o (symbol from plugin)
+cmdGetInputLine                                   Release\console.o (symbol from plugin)
+                                                  Release\main.o (symbol from plugin)
+cmdHelpFunc                                       Release\commands.o (symbol from plugin)
+cmdHelpHelp                                       Release\commands.o (symbol from plugin)
+cmdHelpSpec                                       Release\commands.o (symbol from plugin)
+cmdLoadFunc                                       Release\commands.o (symbol from plugin)
+cmdLoadHelp                                       Release\commands.o (symbol from plugin)
+cmdLoadSpec                                       Release\commands.o (symbol from plugin)
+cmdNameFunc                                       Release\commands.o (symbol from plugin)
+cmdNameHelp                                       Release\commands.o (symbol from plugin)
+cmdNameSpec                                       Release\commands.o (symbol from plugin)
+cmdOverwriteLine                                  Release\console.o (symbol from plugin)
+cmdParseBuffer                                    Release\console.o (symbol from plugin)
+cmdReadRamFunc                                    Release\commands.o (symbol from plugin)
+cmdReadRamHelp                                    Release\commands.o (symbol from plugin)
+cmdReadRamSpec                                    Release\commands.o (symbol from plugin)
+cmdSaveFunc                                       Release\commands.o (symbol from plugin)
+cmdSaveHelp                                       Release\commands.o (symbol from plugin)
+cmdSaveSpec                                       Release\commands.o (symbol from plugin)
+cmdStrFile1                                       Release\commands.o (symbol from plugin)
+cmdStrFile2                                       Release\commands.o (symbol from plugin)
+cmdStrFilt                                        Release\commands.o (symbol from plugin)
+cmdStrFiltEn1                                     Release\commands.o (symbol from plugin)
+cmdStrFiltEn2                                     Release\commands.o (symbol from plugin)
+cmdStrHelp1                                       Release\commands.o (symbol from plugin)
+cmdStrLoad                                        Release\commands.o (symbol from plugin)
+cmdStrName1                                       Release\commands.o (symbol from plugin)
+cmdStrName2                                       Release\commands.o (symbol from plugin)
+cmdStrReadRam1                                    Release\commands.o (symbol from plugin)
+cmdStrReadRam2                                    Release\commands.o (symbol from plugin)
+cmdStrReadRam3                                    Release\commands.o (symbol from plugin)
+cmdStrReadRam4                                    Release\commands.o (symbol from plugin)
+cmdStrSave                                        Release\commands.o (symbol from plugin)
+cmdStrTap1                                        Release\commands.o (symbol from plugin)
+cmdStrTap2                                        Release\commands.o (symbol from plugin)
+cmdStrTap3                                        Release\commands.o (symbol from plugin)
+cmdStrTap4                                        Release\commands.o (symbol from plugin)
+cmdStrTaps1                                       Release\commands.o (symbol from plugin)
+cmdStrTaps2                                       Release\commands.o (symbol from plugin)
+cmdTapFunc                                        Release\commands.o (symbol from plugin)
+cmdTapHelp                                        Release\commands.o (symbol from plugin)
+cmdTapSpec                                        Release\commands.o (symbol from plugin)
+cmdTapsFunc                                       Release\commands.o (symbol from plugin)
+cmdTapsHelp                                       Release\commands.o (symbol from plugin)
+cmdTapsSpec                                       Release\commands.o (symbol from plugin)
+commandList                                       Release\commands.o (symbol from plugin)
+                                                  Release\console.o (symbol from plugin)
+cpuCycle                                          Release\main.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+debouncePBs                                       Release\main.o (symbol from plugin)
+dspBiquadFilter                                   Release\asmdsp.o
+                                                  C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\dsp.o (symbol from plugin)
+dspGetLiveSample                                  Release\dsp.o (symbol from plugin)
+dspHighpass                                       Release\asmdsp.o
+                                                  C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\dsp.o (symbol from plugin)
+dspInit                                           Release\dsp.o (symbol from plugin)
+                                                  Release\main.o (symbol from plugin)
+dspParams                                         C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\dsp.o (symbol from plugin)
+                                                  Release\menu.o (symbol from plugin)
+                                                  Release\main.o (symbol from plugin)
+                                                  Release\lcd.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+                                                  Release\asmdsp.o
+dspReverbTaps                                     Release\dsp.o (symbol from plugin)
+eeprom_read_block                                 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eerd_block.o)
+                                                  C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\menu.o (symbol from plugin)
+eeprom_write_block                                e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eewr_block.o)
+                                                  C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\menu.o (symbol from plugin)
+eeprom_write_byte                                 e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eewr_byte.o)
+eeprom_write_r18                                  e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eewr_byte.o)
+                                                  e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eewr_block.o)
+exit                                              e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/avrxmega4\libgcc.a(_exit.o)
+                                                  e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+hexToNum                                          Release\console.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+initialize                                        Release\main.o (symbol from plugin)
+isLetter                                          Release\console.o (symbol from plugin)
+isSpace                                           Release\console.o (symbol from plugin)
+lcdCursor                                         Release\lcd.o (symbol from plugin)
+lcdInit                                           Release\lcd.o (symbol from plugin)
+                                                  Release\main.o (symbol from plugin)
+lcdLocate                                         Release\lcd.o (symbol from plugin)
+                                                  Release\menu.o (symbol from plugin)
+lcdPrintFill                                      Release\lcd.o (symbol from plugin)
+                                                  Release\menu.o (symbol from plugin)
+lcdPrintNumDec                                    Release\lcd.o (symbol from plugin)
+                                                  Release\menu.o (symbol from plugin)
+lcdPrintStr                                       Release\lcd.o (symbol from plugin)
+                                                  Release\menu.o (symbol from plugin)
+lcdPrintStrLen                                    Release\lcd.o (symbol from plugin)
+                                                  Release\menu.o (symbol from plugin)
+lcdTimerFlag                                      Release\lcd.o (symbol from plugin)
+lcdWrite                                          Release\lcd.o (symbol from plugin)
+                                                  Release\menu.o (symbol from plugin)
+mac32p16p16                                       Release\asmdsp.o
+mac32r16p8                                        Release\asmdsp.o
+                                                  C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\dsp.o (symbol from plugin)
+main                                              C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\main.o (symbol from plugin)
+                                                  e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4/crtatxmega64d3.o
+memcpy                                            e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(memcpy.o)
+                                                  e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libatxmega64d3.a(eerd_block.o)
+menuAct                                           Release\menu.o (symbol from plugin)
+                                                  Release\main.o (symbol from plugin)
+menuActMain                                       Release\menu.o (symbol from plugin)
+menuActPresets                                    Release\menu.o (symbol from plugin)
+menuDraw                                          Release\menu.o (symbol from plugin)
+                                                  Release\main.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+menuEnd                                           Release\menu.o (symbol from plugin)
+menuIndex                                         Release\menu.o (symbol from plugin)
+menuInit                                          Release\menu.o (symbol from plugin)
+                                                  Release\main.o (symbol from plugin)
+menuInitPresets                                   Release\menu.o (symbol from plugin)
+menuItemXRange                                    Release\menu.o (symbol from plugin)
+menuLoadPreset                                    Release\menu.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+menuMenu                                          Release\menu.o (symbol from plugin)
+menuPosX                                          Release\menu.o (symbol from plugin)
+menuPosY                                          Release\menu.o (symbol from plugin)
+menuSavePreset                                    Release\menu.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+menuSetupPresets                                  Release\menu.o (symbol from plugin)
+menuStrFilterTitle                                Release\menu.o (symbol from plugin)
+menuStrPresetMenuTitle                            Release\menu.o (symbol from plugin)
+menuStrPresetsTitle                               Release\menu.o (symbol from plugin)
+menuStrReverbTitle                                Release\menu.o (symbol from plugin)
+menuTotal                                         Release\menu.o (symbol from plugin)
+nibbleToAscii                                     Release\console.o (symbol from plugin)
+                                                  Release\bufserial.o (symbol from plugin)
+numLen                                            Release\menu.o (symbol from plugin)
+readRamWord                                       Release\asmdsp.o
+                                                  C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\dsp.o (symbol from plugin)
+serGetByte                                        Release\bufserial.o (symbol from plugin)
+                                                  Release\console.o (symbol from plugin)
+serInit                                           Release\bufserial.o (symbol from plugin)
+                                                  Release\main.o (symbol from plugin)
+serPutByte                                        Release\bufserial.o (symbol from plugin)
+                                                  Release\console.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+serPutNumDec                                      Release\bufserial.o (symbol from plugin)
+serPutNumHex                                      Release\bufserial.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+serPutNumHexFixed_b                               Release\bufserial.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+serPutNumHexFixed_w                               Release\bufserial.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+serPutString                                      Release\bufserial.o (symbol from plugin)
+                                                  Release\console.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+serPutStringPgm                                   Release\bufserial.o (symbol from plugin)
+                                                  Release\console.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+serPutStringPgmL                                  Release\bufserial.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+serRxBuffer                                       Release\bufserial.o (symbol from plugin)
+serRxBufferEmpty                                  Release\bufserial.o (symbol from plugin)
+                                                  Release\console.o (symbol from plugin)
+serRxBufferEnd                                    Release\bufserial.o (symbol from plugin)
+serRxBufferFull                                   Release\bufserial.o (symbol from plugin)
+serRxBufferStart                                  Release\bufserial.o (symbol from plugin)
+serTxBuffer                                       Release\bufserial.o (symbol from plugin)
+serTxBufferEmpty                                  Release\bufserial.o (symbol from plugin)
+serTxBufferEnd                                    Release\bufserial.o (symbol from plugin)
+serTxBufferFull                                   Release\bufserial.o (symbol from plugin)
+serTxBufferStart                                  Release\bufserial.o (symbol from plugin)
+serWaitTransmit                                   Release\bufserial.o (symbol from plugin)
+                                                  Release\console.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+strCountTokens                                    Release\console.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+strNextToken                                      Release\console.o (symbol from plugin)
+                                                  Release\commands.o (symbol from plugin)
+strNextTokenLen                                   Release\console.o (symbol from plugin)
+strNextTokenStart                                 Release\console.o (symbol from plugin)
+strncmp_P                                         e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strncmp_P.o)
+                                                  C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\console.o (symbol from plugin)
+strncpy                                           e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strncpy.o)
+                                                  C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+strrev                                            e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(strrev.o)
+                                                  e:/program files/atmel/atmel toolchain/avr8 gcc/native/8.1.0/bin/../lib/gcc/avr/8.1.0/../../../../avr/lib/avrxmega4\libc.a(utoa_ncheck.o)
+timerFlag                                         Release\main.o (symbol from plugin)
+toUcase                                           Release\console.o (symbol from plugin)
+writeDac                                          Release\asmdsp.o
+                                                  C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\dsp.o (symbol from plugin)
+writeRamWord                                      Release\asmdsp.o
+                                                  C:\Users\TIMWIL~1\AppData\Local\Temp\ccchc7RE.ltrans0.ltrans.o
+                                                  Release\dsp.o (symbol from plugin)
