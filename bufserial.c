@@ -300,6 +300,8 @@ ISR(SER_PORT_RXC_v) {
  */
 ISR(SER_PORT_DRE_v) {
 
+	//	Typical 55 (not empty) / 45/46 (empty) cycles on XMEGA, avr-gcc 8.1.0, -Os
+
 	if (!serTxBufferEmpty()) {
 		//	More bytes to go, pop off the next one
 		SER_PORT.DATA = serTxBuffer[serTxBufferEnd++];

@@ -34,21 +34,33 @@
 
 #define DSP_DEFAULT_PARAMS	\
 .taps = 0,					\
-.filtEn = false,			\
+.filtEn = 0,				\
+.gainClean = 0x7f,			\
+.gainReverb = 0x7f,			\
 .dlyList = {				\
-	0x000800,				\
-	0x000d00,				\
-	0x001200,				\
-	0x002000,				\
+	0x0a00,					\
+	0x1000,					\
+	0x1800,					\
+	0x3000,					\
+	0x5000,					\
+	0x8000					\
 },							\
 .gainList = {				\
-	0x18,					\
-	0x14,					\
-	0x10,					\
-	0x00					\
+	0x1e,					\
+	0x16,					\
+	0x16,					\
+	0x12,					\
+	0x12,					\
+	0x0a					\
 },							\
-/*	Biquad filter coefficients a0, a1, a2, b1, b2 (b0 normalized)  */	\
+/*	Biquad filter coefficients a0, a1, a2, b1, b2 (b0 normalized) x 2   */	\
 .filt = {					\
+	 0.748178	*  16384,	\
+	-0.978082	*  16384,	\
+	 0.367963	*  16384,	\
+	-1.410055	* -16384,	\
+	 0.548114	* -16384,	\
+							\
 	 0.748178	*  16384,	\
 	-0.978082	*  16384,	\
 	 0.367963	*  16384,	\
@@ -59,12 +71,15 @@
 
 typedef __uint24 uint24_t;
 
+/*	Warning: keep synced with equs in asmdsp.S  */
 typedef struct dsp_params_s {
 	uint8_t taps;
-	bool filtEn;
-	uint16_t dlyList[4];
-	uint8_t gainList[4];
-	int16_t filt[5];
+	uint8_t filtEn;
+	int8_t gainClean;
+	int8_t gainReverb;
+	uint16_t dlyList[6];
+	uint8_t gainList[6];
+	int16_t filt[10];
 	uint8_t name[MENU_TITLE_LEN];
 } dsp_params_t;
 
@@ -73,21 +88,19 @@ typedef struct dsp_params_s {
 #endif
 
 #define DSP_TIMER			TCC1
-#define DSP_VECTOR			TCC1_OVF_vect
-/** The DSP should only be stopped briefly, and well before a new cycle begins, to prevent delaying results. */
-#define dspStart()			DSP_TIMER.INTCTRLA = TC_OVFINTLVL_MED_gc
-#define dspStop()			DSP_TIMER.INTCTRLA = TC_OVFINTLVL_OFF_gc
-//	DSP activity has many more dependencies; add here as needed
-#define dspActive()			(!!(DSP_TIMER.INTCTRLA & TC_OVFINTLVL_HI_gc))
-/** A DSP cycle is imminent if there is less than 10us before the next cycle begins. */
-#define dspImminent()		(DSP_TIMER.CNTL >= DSP_DECIMATION - 1)
+#define DSP_COPY_VECTOR		TCC1_OVF_vect
+#define DSP_EVAL_VECTOR		TCC1_CCA_vect
+
+/** The DSP must be stopped only briefly, to prevent delaying results. */
+#define dspStart()			DSP_TIMER.INTCTRLB = TC_CCAINTLVL_LO_gc
+#define dspStop()			DSP_TIMER.INTCTRLB = TC_CCAINTLVL_OFF_gc
 
 #endif // __ASSEMBLER__
 //	10Hz HP cutoff
 #define HIGHPASS_FEEDBACK	225
 #ifndef __ASSEMBLER__
 
-volatile int16_t adcSlowSample;
+volatile int16_t adcSlowSample __attribute__((address (2)));
 volatile dsp_params_t dspParams;
 
 void dspInit(void);
@@ -98,13 +111,14 @@ void writeRamByte(uint24_t a, uint8_t d);
 uint16_t readRamWord(uint24_t a);
 void writeRamWord(uint24_t a, uint16_t d);
 #endif // RAM_WORD_ACCESS
-void writeDac(const int16_t v);
+void writeDac(int16_t v);
 int32_t mac32p16p16(int32_t acc, const int16_t* p1, const int16_t* p2);
 int32_t mac32r16p8(int32_t acc, int16_t r, const int8_t* p);
 int16_t dspGetLiveSample(void);
 int16_t dspHighpass(int16_t samp);
 int16_t dspReverbTaps(int16_t samp, uint16_t headAddr);
 int16_t dspBiquadFilter(int16_t samp);
+int16_t dspMix(int16_t samp1, int16_t samp2);
 #endif // __ASSEMBLER__
 
 #endif // DSP_H_INCLUDED

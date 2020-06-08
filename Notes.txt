@@ -230,7 +230,7 @@ Vref					10				-5V			X
 						24				+6V			X
 								1		GND			X
 								2		+3.3V		X
-								3		Vcontrast	
+								3		Vcontrast	X
 								5		GND			X
 
 - Noninverting configuration, VREF applied to Iout1, voltage comes out Vref pin.
@@ -308,3 +308,9 @@ Menu System
 			- Probably not enough CPU for per-tap
 		+ Lowpass, highpass, mix?  Several cascaded?
 
+
+Cool filter coefficients
+Default: 12258, -16024, 6028, 23102, -8980
+Bandpass: 1148, 0, -1148, 30386, -14089
+HF cutoff: 7123, 14245, 7123, -8508, -3599
+High notch: 12773, -21795, 11211, 21795, -7600

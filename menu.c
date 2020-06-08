@@ -7,7 +7,8 @@ void menuActMain(int8_t moveX, int8_t moveY);
 void menuActPresets(int8_t moveX, int8_t moveY);
 void menuSavePreset(void);
 void menuLoadPreset(void);
-
+void menuCopyFilt12(void);
+void menuCopyFilt21(void);
 
 /* * *  Global Variables  * * */
 
@@ -17,9 +18,10 @@ uint8_t PresetIndex = 1;
 dsp_params_t Presets[16];
 menu_item_t MenuPreset[];
 
-uint8_t menuStrPresetsTitle[] = "s";
-uint8_t menuStrReverbTitle[] = "b Taps -";
-uint8_t menuStrFilterTitle[] = " Coefs -";
+uint8_t menuStrPresetsTitle[]	= "s";
+uint8_t menuStrReverbTitle[]	= "b Taps -";
+uint8_t menuStrFilterTitle[]	= " Coefs -";
+uint8_t menuStrMixTitle[]		= " -";
 
 menu_item_t MenuMain[] = {
 	{ .i = {
@@ -51,6 +53,21 @@ menu_item_t MenuMain[] = {
 		.type = MENU_FIXEDSTRING8,
 		.ptr = &dspParams.name,
 		.title = "Name "
+	} },
+	{ .i = {
+		.type = MENU_TITLE,
+		.ptr = menuStrMixTitle,
+		.title = "- Mixing"
+	} },
+	{ .i = {
+		.type = MENU_INT8 | MENU_SIGNED,
+		.ptr = &dspParams.gainClean,
+		.title = "Clean"
+	} },
+	{ .i = {
+		.type = MENU_INT8 | MENU_SIGNED,
+		.ptr = &dspParams.gainReverb,
+		.title = "Reverb"
 	} },
 	{ .i = {
 		.type = MENU_TITLE,
@@ -103,6 +120,26 @@ menu_item_t MenuMain[] = {
 		.title = "Gain 4"
 	} },
 	{ .i = {
+		.type = MENU_INT16,
+		.ptr = &dspParams.dlyList[4],
+		.title = "Dly 5"
+	} },
+	{ .i = {
+		.type = MENU_INT8 | MENU_SIGNED,
+		.ptr = &dspParams.gainList[4],
+		.title = "Gain 5"
+	} },
+	{ .i = {
+		.type = MENU_INT16,
+		.ptr = &dspParams.dlyList[5],
+		.title = "Dly 6"
+	} },
+	{ .i = {
+		.type = MENU_INT8 | MENU_SIGNED,
+		.ptr = &dspParams.gainList[5],
+		.title = "Gain 6"
+	} },
+	{ .i = {
 		.type = MENU_TITLE,
 		.ptr = menuStrFilterTitle,
 		.title = "- Filter"
@@ -110,32 +147,66 @@ menu_item_t MenuMain[] = {
 	{ .i = {
 		.type = MENU_INT8,
 		.ptr = &dspParams.filtEn,
-		.title = "Filt En."
+		.title = "Stages"
 	} },
 	{ .i = {
 		.type = MENU_INT16 | MENU_SIGNED,
 		.ptr = &dspParams.filt[0],
-		.title = "a0"
+		.title = "1a0"
 	} },
 	{ .i = {
 		.type = MENU_INT16 | MENU_SIGNED,
 		.ptr = &dspParams.filt[1],
-		.title = "a1"
+		.title = "1a1"
 	} },
 	{ .i = {
 		.type = MENU_INT16 | MENU_SIGNED,
 		.ptr = &dspParams.filt[2],
-		.title = "a2"
+		.title = "1a2"
 	} },
 	{ .i = {
 		.type = MENU_INT16 | MENU_SIGNED,
 		.ptr = &dspParams.filt[3],
-		.title = "b1"
+		.title = "1b1"
 	} },
 	{ .i = {
 		.type = MENU_INT16 | MENU_SIGNED,
 		.ptr = &dspParams.filt[4],
-		.title = "b2"
+		.title = "1b2"
+	} },	{ .i = {
+		.type = MENU_FUNC,
+		.ptr = menuCopyFilt12,
+		.title = "Copy 1\x7e""2"
+	} },
+	{ .i = {
+		.type = MENU_FUNC,
+		.ptr = menuCopyFilt21,
+		.title = "Copy 2\x7e""1"
+	} },
+	{ .i = {
+		.type = MENU_INT16 | MENU_SIGNED,
+		.ptr = &dspParams.filt[5],
+		.title = "2a0"
+	} },
+	{ .i = {
+		.type = MENU_INT16 | MENU_SIGNED,
+		.ptr = &dspParams.filt[6],
+		.title = "2a1"
+	} },
+	{ .i = {
+		.type = MENU_INT16 | MENU_SIGNED,
+		.ptr = &dspParams.filt[7],
+		.title = "2a2"
+	} },
+	{ .i = {
+		.type = MENU_INT16 | MENU_SIGNED,
+		.ptr = &dspParams.filt[8],
+		.title = "2b1"
+	} },
+	{ .i = {
+		.type = MENU_INT16 | MENU_SIGNED,
+		.ptr = &dspParams.filt[9],
+		.title = "2b2"
 	} },/*
 	{ .i = {
 		.type = MENU_,
@@ -629,6 +700,21 @@ void menuActPresets(int8_t moveX, int8_t moveY) {
  */void menuLoadPreset(void) {
 
 	eeprom_read_block((void*)&dspParams, (void*)&Presets[PresetIndex - 1], sizeof(dspParams));
-	//memcpy((void*)&dspParams, (void*)&Presets[PresetIndex] + MAPPED_EEPROM_START, sizeof(dspParams));
+
+}
+
+/**
+ *	Copies filter coefficient set 1 to set 2.
+ */void menuCopyFilt12(void) {
+
+	memcpy((void*)&dspParams.filt[5], (void*)&dspParams.filt[0], 10);
+
+}
+
+/**
+ *	Copies filter coefficient set 2 to set 1.
+ */void menuCopyFilt21(void) {
+
+	memcpy((void*)&dspParams.filt[0], (void*)&dspParams.filt[5], 10);
 
 }

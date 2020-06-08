@@ -131,9 +131,7 @@ void lcdLocate(uint8_t col, uint8_t row) {
 void lcdWrite(uint8_t d, bool ctrl) {
 
 	lcdWaitTimer();
-	//	Wait for bus available
-	while (dspActive() && dspImminent());
-	//	Ok, safe to take control of bus
+	//	Take control of bus
 	dspStop();
 	if (ctrl) {
 		AssertLcdRs();

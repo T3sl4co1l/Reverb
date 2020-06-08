@@ -51,7 +51,7 @@
 			<Add after="E:\Program Files\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.1061\avr8-gnu-toolchain\bin\avr-size --mcu=atxmega64d3 --format=avr $(TARGET_OUTPUT_FILE)" />
 		</ExtraCommands>
 		<Unit filename="asmdsp.S">
-			<Option compiler="avr-gcc" use="1" buildCommand="$compiler $options -x assembler-with-cpp $includes -c $file -o $object" />
+			<Option compiler="avr-gcc" use="0" buildCommand="$compiler $options -x assembler-with-cpp $includes -c $file -o $object" />
 		</Unit>
 		<Unit filename="bufserial.c">
 			<Option compilerVar="CC" />

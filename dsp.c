@@ -3,8 +3,7 @@
 
 /* * *  Global Variables  * * */
 
-volatile int16_t adcLiveSample __attribute__((address (0)));
-volatile int16_t adcSlowSample;
+volatile uint16_t adcLiveSample __attribute__((address (0)));
 
 volatile dsp_params_t dspParams = {
 	DSP_DEFAULT_PARAMS
@@ -15,10 +14,14 @@ volatile dsp_params_t dspParams = {
 
 void dspInit(void) {
 
-	//	Enable timer C1, event triggered interrupt
+	//	Enable timer C1, event triggered interrupt (copy ADC result)
+	//	CCA compare triggered interrupt (run DSP operation)
 	DSP_TIMER.PER = DSP_DECIMATION;
 	DSP_TIMER.CTRLA = TC_CLKSEL_EVCH0_gc;
 	DSP_TIMER.CTRLB = 0;
+	DSP_TIMER.CCA = DSP_DECIMATION / 2;
+	DSP_TIMER.INTCTRLA = TC_OVFINTLVL_MED_gc;
+	DSP_TIMER.INTCTRLB = TC_CCAINTLVL_LO_gc;
 
 	//	Event source ADC -- timer decimates ADC to 25kS/s
 	EVSYS.CH0MUX = EVSYS_CHMUX_ADCA_CH0_gc;
@@ -43,8 +46,8 @@ void dspInit(void) {
 
 }
 
-#pragma GCC push_options
 #pragma GCC optimize ("-O3")
+
 #ifdef RAM_WORD_ACCESS
 #ifndef DSP_USE_ASM
 /**
@@ -164,21 +167,17 @@ void writeRamByte(uint24_t a, uint8_t d) {
  *	Writes a word to the DAC.
  *	Converts the signed 16-bit operand to 12-bit unsigned for output.
  */
-void writeDac(const int16_t v) {
+void writeDac(int16_t v) {
 
-	int16_t x;
+	uint16_t x;
 
-	//	Truncate with rounding, add DC offset (unsigned DAC)
 	x = v;
-	x >>= 2; x++; x >>= 1;
-	if (x > 2047) {
-		x = 2047;
-	} else if (x < -2048) {
-		x = -2048;
-	}
-	x += 2048;
+	x >>= 3;
+	//	Convert from signed, and help
+	//	evade DAC1209's bad code at 0x800
+	x += 0x830;
 	//	Set data
-	PORT_DACLO.OUT = x & 0xff;
+	PORT_DACLO.OUT = x;
 	PORT_DACLO.DIR = 0xff;
 	PORT_DACHI.OUT = x >> 8;
 	//	Strobe write
@@ -228,12 +227,8 @@ int16_t dspGetLiveSample(void) {
 	int16_t samp;
 
 	ATOMIC_BLOCK(ATOMIC_FORCEON) {
-//		samp = adcLiveSample;
-		samp = GPIOR0 | (GPIOR1 << 8);
-//		adcLiveSample = 0;
-		GPIOR0 = 0; GPIOR1 = 0;
+		samp = adcSlowSample;
 	}
-	adcSlowSample = samp;
 
 	/*	Magic number isn't all that consequential, but comes from
 	 *	the ADC having a range of (0.0, 2.681V) --> (1524, 32760)
@@ -256,7 +251,9 @@ int16_t dspHighpass(int16_t samp) {
 
 	return samp;
 }
+#endif // DSP_USE_ASM
 
+#ifndef DSP_USE_ASM
 int16_t dspReverbTaps(int16_t samp, uint16_t headAddr) {
 
 	int16_t ram;
@@ -278,10 +275,10 @@ int16_t dspReverbTaps(int16_t samp, uint16_t headAddr) {
 //		accum += ((int32_t)ram * *ptr8++);
 		accum = mac32r16p8(accum, ram, ptr8++);
 	}
-	if (accum >= 0x3fffff) {
+	if (accum >= 0x00400000) {
 		samp = 32767;
-	} else if (accum <= -0x3fffff) {
-		samp = -32767;
+	} else if (accum <= 0xffc00000) {
+		samp = -32768;
 	} else {
 		samp = accum >> 8; samp <<= 1; accum &= 0x80; accum <<= 1; samp |= (accum >> 8) & 1;
 		//samp = accum >> 7;
@@ -303,36 +300,61 @@ int16_t dspReverbTaps(int16_t samp, uint16_t headAddr) {
  */
 int16_t dspBiquadFilter(int16_t samp) {
 
-	static int16_t history[5];
+	static int16_t history[10];
 	int16_t* ptr1 = (int16_t*)dspParams.filt;
 	int16_t* ptr2 = history;
 	int32_t accum;
-	uint8_t i;
+	uint8_t i, j;
 
-	history[2] = history[1];
-	history[1] = history[0];
-	history[0] = samp; accum = 0;
-	for (i = 0; i < 5; i++) {
-//		accum += (int32_t)dspParams.filt[i] * history[i];
-		accum = mac32p16p16(accum, ptr1++, ptr2++);
+	if (dspParams.filtEn > 2) {
+		dspParams.filtEn = 2;
 	}
-	//samp = accum >> 14;
-	samp = accum >> 16;
-	if (samp >= 0x2000) {
-		samp = 32767;
-	} else if (samp < -0x1fff) {
-		samp = -32767;
-	} else {
-		samp <<= 2;
-		i = accum >> 8;
-		i = i << 4 | i >> 4; // __builtin_avr_swap(i);
-		i = (i >> 2) & 0x03;
-		samp |= i;
+	for (j = 0; j < dspParams.filtEn; j++) {
+
+		ptr2[2] = ptr2[1];
+		ptr2[1] = ptr2[0];
+		ptr2[0] = samp; accum = 0;
+		for (i = 0; i < 5; i++) {
+	//		accum += (int32_t)dspParams.filt[i] * history[i];
+			accum = mac32p16p16(accum, ptr1++, ptr2++);
+		}
+		//samp = accum >> 14;
+		samp = accum >> 16;
+		if (samp >= 0x2000) {
+			samp = 32767;
+		} else if (samp < -0x1fff) {
+			samp = -32767;
+		} else {
+			samp <<= 2;
+			i = accum >> 8;
+			i = i << 4 | i >> 4; // __builtin_avr_swap(i);
+			i = (i >> 2) & 0x03;
+			samp |= i;
+		}
+		ptr2 -= 5;
+		ptr2[4] = ptr2[3];
+		ptr2[3] = samp;
+
+		ptr2 += 5;
 	}
-	history[4] = history[3];
-	history[3] = samp;
 
 	return samp;
+}
+#endif // DSP_USE_ASM
+
+#ifndef DSP_USE_ASM
+/**
+ *	Two channel mixer.  samp1 and samp2 are summed, scaled
+ *	by the gains from dspParams.gainClean and gainReverb.
+ */
+int16_t dspMix(int16_t samp1, int16_t samp2) {
+
+	int32_t accum = 0;
+
+	accum = mac32r16p8(accum, samp1, (int8_t*)&dspParams.gainClean);
+	accum = mac32r16p8(accum, samp2, (int8_t*)&dspParams.gainReverb);
+
+	return (accum << 1) >> 8;
 }
 #endif // DSP_USE_ASM
 
@@ -345,44 +367,58 @@ int16_t dspBiquadFilter(int16_t samp) {
  */
 ISR(ADCA_CH0_vect) {
 
-	//	GPIOR0 = adcLiveSample[0]
-	//	GPIOR1 = adcLiveSample[1]
+	//	GPIOR0 <--> adcLiveSample[0]
+	//	GPIOR1 <--> adcLiveSample[1]
 	adcLiveSample += ADCA.CH0.RES;
 
 }
 #endif // DSP_USE_ASM
 
-#pragma GCC optimize ("-fno-inline")
+#ifndef DSP_USE_ASM
 /**
  *	Triggered by ADC decimation event, 25kS/s.
- *	Performs DSP operations and DAC output.
+ *	Copies the live sample to a buffer, so it can be
+ *	processed at a lower bus priority over the bus.
  */
-ISR(DSP_VECTOR) {
+ISR(DSP_COPY_VECTOR) {
+	ATOMIC_BLOCK(ATOMIC_FORCEON) {
+		adcSlowSample = adcLiveSample;
+		adcLiveSample = 0;
+	}
+}
+#endif // DSP_USE_ASM
+
+//#pragma GCC optimize ("-fno-inline")
+/**
+ *	Triggered by ADC decimation, out of phase with the buffer
+ *	trigger.  Performs DSP operations and DAC output.
+ */
+ISR(DSP_EVAL_VECTOR) {
 
 	static uint16_t headAddr = 0;
-	int16_t samp;
+	int16_t samp = 0, samp2;
 
 	samp = dspGetLiveSample();
 
 	samp = dspHighpass(samp);
+	samp2 = samp;
 
 	if (dspParams.taps > numelem(dspParams.dlyList)) {
 		dspParams.taps = numelem(dspParams.dlyList);
 	}
 	samp = dspReverbTaps(samp, headAddr);
 
-	//	Filter the reverb buffer to give a more natural rolloff
-	if (dspParams.filtEn) {
-		dspParams.filtEn = true;
-		samp = dspBiquadFilter(samp);
-	}
+	writeDac(dspMix(samp2, samp));
 
-	writeDac(samp);
+	//	Filter into the reverb buffer to give a more natural rolloff
+	samp = dspBiquadFilter(samp);
+
+	headAddr += 2;
 #ifdef RAM_WORD_ACCESS
-	writeRamWord(headAddr, samp); headAddr += 2;
+	writeRamWord(headAddr, samp);
 #else
-	writeRamByte(headAddr++, samp & 0xff);
-	writeRamByte(headAddr++, samp >> 8);
+	writeRamByte(headAddr - 2, samp & 0xff);
+	writeRamByte(headAddr - 1, samp >> 8);
 #endif // RAM_WORD_ACCESS
 
 }
