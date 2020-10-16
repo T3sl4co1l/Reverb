@@ -1,7 +1,6 @@
-//#include "main.h"
-#include "ccpwrite.h"
 #include <inttypes.h>
 #include <avr/interrupt.h>
+#include "ccpwrite.h"
 
 #ifdef __cplusplus
 extern "C" {

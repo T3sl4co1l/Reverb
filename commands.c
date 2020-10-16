@@ -290,6 +290,7 @@ uint8_t cmdDumpMem(uint8_t len, uint8_t* buf, uint8_t memtype) {
 	j = addr & 0x0f;
     for (i = j * 3 + (j >= 8); i; i--) {
 		serPutByte(' ');
+		serWaitTransmit();
     }
 	while (1) {
 		j = addr & 0x0f;
@@ -319,7 +320,7 @@ uint8_t cmdDumpMem(uint8_t len, uint8_t* buf, uint8_t memtype) {
 		if (j == 15) {
 			//	End of line, put ascii version and return
 			serPutString(numelem(asciiBuf), asciiBuf);
-			for (i = numelem(asciiBuf); i > 2; i--) {
+			for (i = 2; i < numelem(asciiBuf) - 1; i++) {
 				asciiBuf[i] = ' ';
 			}
 			serWaitTransmit();

@@ -80,18 +80,6 @@
  *	Serial console: PE2, PE3 (USARTE0) to MAX232 to DE-9 jack
  *	Pushbuttons: momentary to GND (use weak pull-ups)
  *
- *	TODO:
- *	- Starvation resonance blocking main() operation.
- *		+ Because LCD bus access is restricted when an ADC sample
- *		  is imminent, the main() thread can end up spinlocking.
- *		  Serial I/O seems to free it up, by stealing enough cycles
- *		  to misalign the threads and allow some operation to continue.
- *		  Maybe I'll add buffered LCD output.
- *	- Optimize dspReverbTaps asm.
- *	- Maybe optimize __vector_20 in asm.
- *	- More asm optimization is possible, but of dubious value?
- *	- Design docs, schematics, photos, blog?
- *
  *	For filter design, recommend:
  *	https://www.earlevel.com/main/2013/10/13/biquad-calculator-v2/
  *	Copy the results, multiply by 16384, round to integer, and negate

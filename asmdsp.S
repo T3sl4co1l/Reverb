@@ -225,6 +225,7 @@ writeDac:
 		out PORT_DACHI_OUT, r25
 		cbi PORT_nWRDAC_OUT, PIN_nWRDAC	; AssertWrDac()
 		nop
+		nop
 		sbi PORT_nWRDAC_OUT, PIN_nWRDAC	; DeassertWrDac()
 		ret
 
